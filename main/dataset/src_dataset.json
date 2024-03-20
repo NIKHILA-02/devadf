@@ -1,0 +1,40 @@
+{
+	"name": "src_dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "bloblinkedservice",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "goa.csv",
+				"container": "source"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Eid",
+				"type": "String"
+			},
+			{
+				"name": "Ename ",
+				"type": "String"
+			},
+			{
+				"name": "Esalary",
+				"type": "String"
+			},
+			{
+				"name": "Eaddress",
+				"type": "String"
+			}
+		]
+	}
+}
